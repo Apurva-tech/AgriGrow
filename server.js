@@ -41,6 +41,10 @@ app.get("/home", (req, res) => {
 app.get("/aibot", (req, res) => {
   res.render("aibot");
 });
+
+app.get("/upload", (req, res) => {
+  res.render("upload");
+});
 // <---------- ROUTES ---------->
 app.post("/invite", sendInvite);
 

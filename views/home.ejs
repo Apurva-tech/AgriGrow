@@ -80,12 +80,12 @@
               <a id="useremail">Loading...</a>
             </div>
           </div>
-          <div class="side-wrapper">
+          <!-- <div class="side-wrapper">
             <div class="side-title">My Rooms</div>
             <div class="side-menu" id="user-rooms">Loading...</div>
             <div class="side-title">Recent rooms</div>
             <div class="side-menu" id="last-rooms">Loading...</div>
-          </div>
+          </div> -->
         </div>
         <div class="main-container">
           <div class="main-header">
@@ -94,7 +94,7 @@
           <div class="content-wrapper">
             <div class="content-wrapper-header">
               <div class="content-wrapper-context">
-                <h3 class="img-content">Unite App</h3>
+                <h3 class="img-content">AgriGrow App</h3>
                 <div class="content-text">
                   Web application, to create chat rooms and join video meetings.
                   Meet with as much people you wish to! Schedule meeting Google
@@ -289,15 +289,20 @@
                   <span>
                     <img
                       id="app-card-img-1"
-                      src="https://img.icons8.com/ios/50/ffffff/video-call.png"
+                      src="https://img.icons8.com/ios/48/ffffff/plant-under-sun.png"
                       style="border: 3px; padding: 10px"
                     />
-                    Create Meeting
+                    Predict Disease
                   </span>
-                  <div class="app-card__subtext">Create your own room</div>
+                  <div class="app-card__subtext">
+                    And remedies for the disease
+                  </div>
                   <div class="app-card-buttons">
-                    <button class="content-button status-button1">
-                      Create
+                    <button
+                      class="content-button"
+                      onclick="window.location.href='/upload'"
+                    >
+                      Predict
                     </button>
                   </div>
                 </div>
@@ -305,15 +310,20 @@
                   <span>
                     <img
                       id="app-card-img-2"
-                      src="https://img.icons8.com/ios/50/ffffff/meeting-room.png"
+                      src="https://img.icons8.com/ios/50/ffffff/soil.png"
                       style="border: 3px; padding: 10px"
                     />
 
-                    Join Meeting
+                    Soil Analysis
                   </span>
-                  <div class="app-card__subtext">Join meeting by meet ID</div>
+                  <div class="app-card__subtext">Location based soil data</div>
                   <div class="app-card-buttons">
-                    <button class="content-button status-button2">Join</button>
+                    <button
+                      class="content-button"
+                      onclick="window.location.href='/aibot'"
+                    >
+                      Soil
+                    </button>
                   </div>
                 </div>
                 <div class="app-card">
@@ -324,11 +334,9 @@
                       style="border: 3px; padding: 10px"
                     />
 
-                    Schedule Meeting
+                    Schedule Reminders
                   </span>
-                  <div class="app-card__subtext">
-                    Schedule with Google Calendar
-                  </div>
+                  <div class="app-card__subtext">With Google Calendar</div>
 
                   <div class="app-card-buttons">
                     <button class="content-button status-button">
@@ -336,7 +344,7 @@
                     </button>
                   </div>
                 </div>
-                <div class="app-card">
+                <!-- <div class="app-card">
                   <span>
                     <img
                       id="app-card-img-4"
@@ -358,7 +366,7 @@
                       Monitor Me
                     </button>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>

@@ -107,17 +107,17 @@ img {
   background-color: rgba(255, 255, 255, 0.94);
 }
 .light-mode .app-card #app-card-img-1 {
-  content: url(https://img.icons8.com/ios/50/000000/video-call.png);
+  content: url(https://img.icons8.com/ios/48/000000/plant-under-sun.png);
 }
 .light-mode .app-card #app-card-img-2 {
-  content: url(https://img.icons8.com/ios/50/000000/meeting-room.png);
+  content: url(https://img.icons8.com/ios/50/000000/soil.png);
 }
 .light-mode .app-card #app-card-img-3 {
   content: url(https://img.icons8.com/ios/50/000000/calendar--v4.png);
 }
-.light-mode .app-card #app-card-img-4 {
+/* .light-mode .app-card #app-card-img-4 {
   content: url(https://img.icons8.com/ios/50/000000/bot.png);
-}
+} */
 body.light-mode:before {
   content: "";
   position: absolute;
@@ -547,7 +547,7 @@ body.light-mode:before {
 }
 .status-button {
   font-size: 15px;
-  margin-top: 0;
+  margin-top: 20px;
   padding: 6px 24px;
 }
 @media screen and (max-width: 390px) {
