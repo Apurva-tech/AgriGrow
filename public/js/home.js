@@ -286,4 +286,4 @@ const loadLocation = async () => {
     });
 };
 
-loadLocation();
+// loadLocation();
