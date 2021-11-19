@@ -246,3 +246,44 @@ function validateMultipleEmails(emailInput) {
     return validEmails;
   } else return null;
 }
+
+const loadLocation = async () => {
+  const options = {
+    method: "GET",
+    url: "https://api.ambeedata.com/weather/latest/by-lat-lng",
+    params: { lat: "12.9889055", lng: "77.574044" },
+    headers: {
+      "x-api-key":
+        "38261bc4fb11d0885e76f72e498efd41f218003090250fabb2e472c45632a7ec",
+      "Content-type": "application/json",
+    },
+  };
+  axios
+    .request(options)
+    .then(function (res) {
+      const response = res.data.data;
+      debugger;
+      document.getElementById(
+        "humidity"
+      ).innerHTML = `humidity : ${response.humidity}`;
+      document.getElementById("summary").innerHTML = response.summary;
+      document.getElementById(
+        "pressure"
+      ).innerHTML = `pressure : ${response.pressure}`;
+      document.getElementById(
+        "visibility"
+      ).innerHTML = `visibility : ${response.visibility}`;
+      document.getElementById(
+        "visibility"
+      ).innerHTML = `visibility : ${response.visibility}`;
+      document.getElementById(
+        "temperature"
+      ).innerHTML = `temperature : ${response.temperature}`;
+    })
+    .catch(function (error) {
+      console.error(error);
+      return null;
+    });
+};
+
+loadLocation();
