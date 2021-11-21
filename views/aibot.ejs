@@ -31,6 +31,7 @@
     ></script>
     <!-- css -->
     <link rel="stylesheet" href="/styles/chatroom.css" />
+    <link rel="stylesheet" href="styles/soil.css" />
   </head>
   <body>
     <div class="dark-light">
@@ -52,9 +53,89 @@
       />
     </div>
     <div class="app">
-      <a id="scantime">loading...</a>
+      <!-- <a id="scantime">loading...</a>
       <a id="soil_temperature">loading...</a>
-      <a id="soil_moisture">loading...</a>
+      <a id="soil_moisture">loading...</a> -->
+      <div class="grid-main">
+        <div class="grid-container">
+          <div class="top-row">
+            <div class="grid-item item1">
+              <b>Raipur</b>, Chhattisgarh<br />
+              <div class="grid-item">time</div>
+              <div className="temp-head">temp</div>
+            </div>
+            <div class="grid-item item2">
+              <div className="temperature-info"></div>
+            </div>
+          </div>
+
+          <div class="middle-row">
+            <div class="grid-item item4">
+              <div className="temp-status-icon">
+                <img
+                  src="https://img.icons8.com/ios-glyphs/50/ffffff/sprout.png"
+                  alt="weather-icon"
+                />
+              </div>
+              <div className="temp-status">Soil temperature</div>
+            </div>
+          </div>
+
+          <div class="grid-item item5">
+            <div class="other-information">
+              <div class="grid-sub-item">
+                <div class="item-icon">
+                  <img
+                    src="https://img.icons8.com/material-outlined/48/ffffff/humidity.png"
+                    className="weather-icon"
+                    alt="temp-icon"
+                  />
+                </div>
+                <div class="item-information">
+                  <div class="item-value">13 %</div>
+                  <div class="item-name">Humidity</div>
+                </div>
+              </div>
+              <div class="grid-sub-item">
+                <div class="item-icon">
+                  <img
+                    src="https://img.icons8.com/ios-filled/48/ffffff/pressure.png"
+                    className="weather-icon"
+                    alt="temp-icon"
+                  />
+                </div>
+                <div class="item-information">
+                  <div class="item-value">5 hPa</div>
+                  <div class="item-name">Pressure</div>
+                </div>
+              </div>
+
+              <div class="grid-sub-item">
+                <div class="item-icon">
+                  <img
+                    src="https://img.icons8.com/ios-glyphs/48/ffffff/wind--v1.png"
+                    className="weather-icon"
+                    alt="temp-icon"
+                  />
+                </div>
+                <div class="item-information">
+                  <div class="item-value">5 m/s</div>
+                  <div class="item-name">Wind</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hrs">
+          <div class="grid-sub-title"><h3>Hourly Forecast</h3></div>
+          <div key="{index}" class="grid-sub-itemss">
+            <div class="item-icon">time</div>
+            <div class="item-information">
+              <div class="item-value">temp</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 

@@ -1,0 +1,153 @@
+.grid-main {
+  margin: 35px auto;
+  max-width: 1003px;
+  color: white;
+  padding: 5px;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.hrs {
+  margin-top: 2em;
+  margin: 2em;
+  min-width: 301px;
+  padding: 10px;
+  background: rgba(154, 150, 170, 0.288);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.grid-sub-title {
+  border-bottom-color: #e4e6ef4f;
+  border-bottom-width: 1px;
+  border-bottom-style: dashed;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.grid-container {
+  margin: 2em auto;
+  max-width: 800px;
+  color: white;
+  padding: 5px;
+  background: rgba(154, 150, 170, 0.288);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  flex-direction: column;
+}
+
+.top-row,
+.middle-row,
+.other-information {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px;
+}
+
+.middle-row {
+  flex-wrap: wrap;
+}
+
+.other-information {
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.item3,
+.item4,
+.grid-sub-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.grid-sub-itemss {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom-color: #e4e6ef4f;
+  border-bottom-width: 1px;
+  border-bottom-style: dashed;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.grid-sub-itemss:last-child {
+  border-bottom: none;
+}
+
+.item-icon {
+  margin-right: 10px;
+}
+
+.grid-item {
+  font-size: 20px;
+  text-align: left;
+}
+
+.item1 {
+  font-size: 40px;
+}
+
+.item-name {
+  font-size: 16px;
+}
+
+.weather-icon {
+  width: 30px;
+}
+
+.temp-head {
+  font-size: 40px;
+  margin-left: 16px;
+}
+
+.temp-status {
+  margin-left: 20px;
+}
+
+@media only screen and (max-width: 570px) {
+  .grid-main {
+    flex-direction: column !important;
+  }
+  .item-icon {
+    margin-right: 10px;
+  }
+
+  .grid-item {
+    font-size: 15px;
+  }
+
+  .item1 {
+    font-size: 20px;
+  }
+
+  .item-name {
+    font-size: 12px;
+  }
+
+  .weather-icon {
+    width: 20px;
+  }
+
+  .temp-head {
+    font-size: 30px;
+  }
+
+  .temp-status-icon img {
+    width: 60px;
+  }
+
+  .temp-status {
+    margin-left: 5px;
+  }
+}
+@media only screen and (max-width: 930px) {
+  .grid-main {
+    flex-direction: column !important;
+  }
+}
