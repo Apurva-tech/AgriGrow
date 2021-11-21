@@ -375,6 +375,7 @@ body.light-mode:before {
     );
   border-radius: 14px;
   padding: 20px 40px;
+  margin-bottom: 8px;
 }
 @media screen and (max-width: 415px) {
   .content-wrapper-header {
