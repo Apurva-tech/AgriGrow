@@ -44,11 +44,9 @@ const sendInvite = async (request, response) => {
   console.log("End Time : " + eventEndTime);
   const event = {
     summary: request.body.summary,
-    location: `https://unite-videochat-app.herokuapp.com/${newRoom.roomID}`,
-    description: `Meeting date & time: ${eventStartTime.toLocaleString()}
-    Meeting chat URL: https://unite-videochat-app.herokuapp.com/chat/${
-      newRoom.roomID
-    }`,
+    location: `None`,
+    description: `Reminder date & time: ${eventStartTime.toLocaleString()}
+   \nBe sure to keep those plants healthy!`,
     creator: {
       email: request.body.organiser,
     },

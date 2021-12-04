@@ -149,7 +149,7 @@ body.light-mode:before {
   background-color: var(--theme-bg-color);
   max-width: 1300px;
   max-height: 950px;
-  height: 150vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;

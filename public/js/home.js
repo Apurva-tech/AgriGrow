@@ -95,7 +95,7 @@ async function SendSchedule() {
   // parse the response as JSON
   console.log("Response data: " + data["success"]);
   if (data["success"]) {
-    document.getElementById("status").innerHTML = "Meeting has been scheduled";
+    document.getElementById("status").innerHTML = "Reminder has been scheduled";
   } else {
     document.getElementById("status").innerHTML = data["data"];
   }
