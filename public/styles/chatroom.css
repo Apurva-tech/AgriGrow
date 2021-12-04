@@ -350,3 +350,7 @@ body.light-mode:before {
 #remedies {
   margin-top: 20px;
 }
+
+.app{
+  overflow-y: scroll;
+}
