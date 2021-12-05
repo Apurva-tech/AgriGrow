@@ -1,1 +1,1 @@
-# Project for OOSDE
+# Project for OOSD
