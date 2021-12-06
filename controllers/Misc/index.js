@@ -127,7 +127,7 @@ const sendInvite = async (request, response) => {
         .json({
           success: false,
           message: "Sorry there's another meeting at that time and date",
-          data: "Another meeting exists at that date and time",
+          data: "Another reminder exists at that date and time",
         })
         .status(500);
     }
