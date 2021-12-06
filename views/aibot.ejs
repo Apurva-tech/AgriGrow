@@ -179,7 +179,7 @@
     .then(function (res) {
       const response = res.data.data;
       debugger;
-      $("#temprature").text($("#temprature").text()+" "+response.temperature);
+      $("#temprature").text($("#temprature").text()+" "+response.temperature+" °C");
       $("#humidity").text(response.humidity+" %");
       $("#pressure").text(response.pressure+" hPa");
       $("#wind").text(response.windSpeed+" m/s");
