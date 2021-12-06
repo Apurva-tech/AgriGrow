@@ -151,7 +151,7 @@ body.light-mode:before {
   background-color: var(--theme-bg-color);
   max-width: 1300px;
   max-height: 950px;
-  height: 75vh;
+  height: 150vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -351,6 +351,6 @@ body.light-mode:before {
   margin-top: 20px;
 }
 
-.app{
+.app {
   overflow-y: scroll;
 }
