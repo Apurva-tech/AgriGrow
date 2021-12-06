@@ -61,8 +61,8 @@
           <div class="top-row">
             <div class="grid-item item1">
               <b>Raipur</b>, Chhattisgarh<br />
-              <div class="grid-item" id="time">time</div>
-              <div className="temp-head" id="temprature">temp</div>
+              <div class="grid-item" id="time">Time</div>
+              <div className="temp-head" id="temprature"></div>
             </div>
             <div class="grid-item item2">
               <div className="temperature-info"></div>
@@ -77,7 +77,9 @@
                   alt="weather-icon"
                 />
               </div>
-              <div className="temp-status" id="soilTemprature">Soil temperature</div>
+              <div className="temp-status" id="soilTemprature">
+                Soil temperature:
+              </div>
             </div>
           </div>
 
@@ -150,60 +152,79 @@
 
   <script src="/js/soil.js" defer></script>
   <script defer>
-  const loadTime = ()=>{
-    const d = new Date();
-    console.log(d.getHours()+":"+d.getMinutes()+":"+d.getSeconds());
+    const loadTime = () => {
+      const d = new Date();
+      console.log(d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds());
 
-    $("#time").text($("#time").text()+" : "+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds());
-  }
-  const loadLocation = async () => {
-  const geoOptions = {
-    method: "GET",
-    url: "http://ip-api.com/json",
-  }
-  const {lat,lon} = (await axios.request(geoOptions)).data; 
-  const options = {
-    method: "GET",
-    url: "https://api.ambeedata.com/weather/latest/by-lat-lng",
-    params: { lat: lat || "12.9889055", lng: lon || "77.574044" },
-    headers: {
-      "x-api-key":
-        "38261bc4fb11d0885e76f72e498efd41f218003090250fabb2e472c45632a7ec",
-      "Content-type": "application/json",
-    },
-  };
-  axios
-    .request(options)
-    .then(function (res) {
-      const response = res.data.data;
-      debugger;
-      $("#temprature").text($("#temprature").text()+" "+response.temperature);
-      $("#humidity").text(response.humidity+" %");
-      $("#pressure").text(response.pressure+" hPa");
-      $("#wind").text(response.windSpeed+" m/s");
-    })
-    .catch(function (error) {
-      console.error(error);
-      return null;
-    });
-  const soilOptions = {
-    method: 'GET',
-    url: 'https://api.ambeedata.com/soil/latest/by-lat-lng',
-    params: {lat: lat || "12.9889055", lng: lon || "77.574044"},
-    headers: {
-      'x-api-key': '38261bc4fb11d0885e76f72e498efd41f218003090250fabb2e472c45632a7ec', 
-      'Content-type': 'application/json'
-    }
-  }
-  axios.request(soilOptions).then(res=>{
-    const response = res.data.data[0];
-    debugger;
-    $("#soilTemprature").text($("#soilTemprature").text()+" "+response.soil_temperature.toFixed(2));
-  }).catch(err=>{
-    console.error(err);
-  })
-};
-  loadTime();
-  loadLocation();
+      $("#time").text(
+        $("#time").text() +
+          " : " +
+          d.getHours() +
+          ":" +
+          d.getMinutes() +
+          ":" +
+          d.getSeconds()
+      );
+    };
+    const loadLocation = async () => {
+      const geoOptions = {
+        method: "GET",
+        url: "http://ip-api.com/json",
+      };
+      const { lat, lon } = (await axios.request(geoOptions)).data;
+      const options = {
+        method: "GET",
+        url: "https://api.ambeedata.com/weather/latest/by-lat-lng",
+        params: { lat: lat || "12.9889055", lng: lon || "77.574044" },
+        headers: {
+          "x-api-key":
+            "38261bc4fb11d0885e76f72e498efd41f218003090250fabb2e472c45632a7ec",
+          "Content-type": "application/json",
+        },
+      };
+      axios
+        .request(options)
+        .then(function (res) {
+          const response = res.data.data;
+          debugger;
+          $("#temprature").text(
+            $("#temprature").text() + " " + response.temperature + " °C"
+          );
+          $("#humidity").text(response.humidity + " %");
+          $("#pressure").text(response.pressure + " hPa");
+          $("#wind").text(response.windSpeed + " m/s");
+        })
+        .catch(function (error) {
+          console.error(error);
+          return null;
+        });
+      const soilOptions = {
+        method: "GET",
+        url: "https://api.ambeedata.com/soil/latest/by-lat-lng",
+        params: { lat: lat || "12.9889055", lng: lon || "77.574044" },
+        headers: {
+          "x-api-key":
+            "38261bc4fb11d0885e76f72e498efd41f218003090250fabb2e472c45632a7ec",
+          "Content-type": "application/json",
+        },
+      };
+      axios
+        .request(soilOptions)
+        .then((res) => {
+          const response = res.data.data[0];
+          debugger;
+          $("#soilTemprature").text(
+            $("#soilTemprature").text() +
+              " " +
+              response.soil_temperature.toFixed(2) +
+              " °C"
+          );
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    };
+    loadTime();
+    loadLocation();
   </script>
 </html>
