@@ -158,21 +158,21 @@ const loadLocation = async () => {
       debugger;
       document.getElementById(
         "humidity"
-      ).innerHTML = `humidity : ${response.humidity}`;
+      ).innerHTML = `Humidity : ${response.humidity}`;
       document.getElementById("summary").innerHTML =
-        "overall : " + response.summary;
+        "Feels like: " + response.summary;
       document.getElementById(
         "pressure"
-      ).innerHTML = `pressure : ${response.pressure}`;
+      ).innerHTML = `Pressure: ${response.pressure}`;
       document.getElementById(
         "visibility"
-      ).innerHTML = `visibility : ${response.visibility}`;
+      ).innerHTML = `Visibility : ${response.visibility}`;
       document.getElementById(
         "visibility"
-      ).innerHTML = `visibility : ${response.visibility}`;
+      ).innerHTML = `Visibility : ${response.visibility}`;
       document.getElementById(
         "temperature"
-      ).innerHTML = `temperature : ${response.temperature}`;
+      ).innerHTML = `Temperature : ${response.temperature} °C`;
     })
     .catch(function (error) {
       console.error(error);
