@@ -136,10 +136,15 @@ function validateMultipleEmails(emailInput) {
 }
 
 const loadLocation = async () => {
+  const geoOptions = {
+    method: "GET",
+    url: "http://ip-api.com/json",
+  };
+  const { lat, lon } = (await axios.request(geoOptions)).data;
   const options = {
     method: "GET",
     url: "https://api.ambeedata.com/weather/latest/by-lat-lng",
-    params: { lat: "12.9889055", lng: "77.574044" },
+    params: { lat: lat || "12.9889055", lng: lon || "77.574044" },
     headers: {
       "x-api-key":
         "38261bc4fb11d0885e76f72e498efd41f218003090250fabb2e472c45632a7ec",
@@ -154,7 +159,8 @@ const loadLocation = async () => {
       document.getElementById(
         "humidity"
       ).innerHTML = `humidity : ${response.humidity}`;
-      document.getElementById("summary").innerHTML = response.summary;
+      document.getElementById("summary").innerHTML =
+        "overall : " + response.summary;
       document.getElementById(
         "pressure"
       ).innerHTML = `pressure : ${response.pressure}`;
@@ -174,4 +180,4 @@ const loadLocation = async () => {
     });
 };
 
-//loadLocation();
+loadLocation();
