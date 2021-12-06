@@ -60,7 +60,7 @@
         <div class="grid-container">
           <div class="top-row">
             <div class="grid-item item1">
-              <b>Raipur</b>, Chhattisgarh<br />
+              <b id="city">Raipur</b>, <span id="state">Chhattisgarh</span><br />
               <div class="grid-item" id="time">time</div>
               <div className="temp-head" id="temprature">temp</div>
             </div>
@@ -161,7 +161,9 @@
     method: "GET",
     url: "http://ip-api.com/json",
   }
-  const {lat,lon} = (await axios.request(geoOptions)).data; 
+  const {lat,lon,city,regionName} = (await axios.request(geoOptions)).data;
+  $("#city").text(city);
+  $("#state").text(regionName); 
   const options = {
     method: "GET",
     url: "https://api.ambeedata.com/weather/latest/by-lat-lng",
