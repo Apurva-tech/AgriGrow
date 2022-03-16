@@ -1,1 +1,1 @@
-# Project for OOSD
+# Project for HCI
